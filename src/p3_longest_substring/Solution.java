@@ -1,4 +1,4 @@
-package longest_substring;
+package p3_longest_substring;
 
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
