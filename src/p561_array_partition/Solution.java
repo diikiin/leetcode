@@ -33,11 +33,55 @@ public class Solution {
         return max;
     }
 
+    public int arrayPairSumBest(int[] nums) {
+        quickSort(nums, 0, nums.length - 1);
+
+        int sum = 0;
+        for (int i = 0; i < nums.length; i += 2) {
+            sum += nums[i];
+        }
+
+        return sum;
+    }
+
+    private void quickSort(int[] nums, int l, int r) {
+        if (l < r) {
+            int p = partition(nums, l, r);
+            quickSort(nums, l, p - 1);
+            quickSort(nums, p + 1, r);
+        }
+    }
+
+    private int partition(int[] nums, int l, int r) {
+        int pivot = nums[r];
+        int i = l - 1;
+
+        for (int j = l; j < r; j++) {
+            if (nums[j] < pivot) {
+                i++;
+                swap(nums, i, j);
+            }
+        }
+
+        swap(nums, i + 1, r);
+        return i + 1;
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
     public static void main(String[] args) {
         Solution s = new Solution();
 
         System.out.println(s.arrayPairSum(new int[]{1, 4, 3, 2}));
         System.out.println(s.arrayPairSum(new int[]{6, 2, 6, 5, 1, 2}));
         System.out.println(s.arrayPairSum(new int[]{1, 2, 2, 5, 5, 6}));
+
+        System.out.println(s.arrayPairSumBest(new int[]{1, 4, 3, 2}));
+        System.out.println(s.arrayPairSumBest(new int[]{6, 2, 6, 5, 1, 2}));
+        System.out.println(s.arrayPairSumBest(new int[]{1, 2, 2, 5, 5, 6}));
     }
 }
