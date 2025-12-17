@@ -15,7 +15,7 @@ public class Solution {
     }
 
     public long getDescentPeriodsBest(int[] prices) {
-        long res = 0;
+        long res = 1;
         int prev = 1;
         for (int i = 1; i < prices.length; i++) {
             if (prices[i] == prices[i - 1] - 1) prev++;
