@@ -1,5 +1,7 @@
 package p102_binary_tree_level_order_traversal;
 
+import models.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

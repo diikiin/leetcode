@@ -1,5 +1,7 @@
 package p101_symmetric_tree;
 
+import models.TreeNode;
+
 public class Solution {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) return true;

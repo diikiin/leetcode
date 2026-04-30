@@ -1,5 +1,7 @@
 package p104_maximum_depth_of_binary_tree;
 
+import models.TreeNode;
+
 public class Solution {
     public int maxDepth(TreeNode root) {
         if (root == null) return 0;

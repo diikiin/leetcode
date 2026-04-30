@@ -1,5 +1,7 @@
 package p144_binary_tree_preorder_traversal;
 
+import models.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -19,7 +21,7 @@ public class Solution {
         }
     }
 
-    public List<Integer> preorderTraversalBest(TreeNode root) {
+    public List<Integer> preorderTraversalWithoutRecursion(TreeNode root) {
         List<Integer> traversal = new ArrayList<>();
         if (root == null) return traversal;
 
@@ -52,8 +54,8 @@ public class Solution {
         TreeNode r3 = new TreeNode(2, new TreeNode(3, new TreeNode(1), null), null);
         System.out.println(s.preorderTraversal(r3));
 
-        System.out.println(s.preorderTraversalBest(r1));
-        System.out.println(s.preorderTraversalBest(r2));
-        System.out.println(s.preorderTraversalBest(r3));
+        System.out.println(s.preorderTraversalWithoutRecursion(r1));
+        System.out.println(s.preorderTraversalWithoutRecursion(r2));
+        System.out.println(s.preorderTraversalWithoutRecursion(r3));
     }
 }

@@ -1,5 +1,7 @@
 package p145_binary_tree_postorder_traversal;
 
+import models.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -19,7 +21,7 @@ public class Solution {
         }
     }
 
-    public List<Integer> postorderTraversalBest(TreeNode root) {
+    public List<Integer> postorderTraversalWithoutRecursion(TreeNode root) {
         List<Integer> traversal = new ArrayList<>();
         if (root == null) return traversal;
 
@@ -59,8 +61,8 @@ public class Solution {
         TreeNode r3 = new TreeNode(2, new TreeNode(3, new TreeNode(1), null), null);
         System.out.println(s.postorderTraversal(r3));
 
-        System.out.println(s.postorderTraversalBest(r1));
-        System.out.println(s.postorderTraversalBest(r2));
-        System.out.println(s.postorderTraversalBest(r3));
+        System.out.println(s.postorderTraversalWithoutRecursion(r1));
+        System.out.println(s.postorderTraversalWithoutRecursion(r2));
+        System.out.println(s.postorderTraversalWithoutRecursion(r3));
     }
 }

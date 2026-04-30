@@ -1,5 +1,7 @@
 package p94_binary_tree_inorder_traversal;
 
+import models.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -20,7 +22,7 @@ public class Solution {
         return traversal;
     }
 
-    public List<Integer> inorderTraversalBest(TreeNode root) {
+    public List<Integer> inorderTraversalWithoutRecursion(TreeNode root) {
         List<Integer> traversal = new ArrayList<>();
         if (root == null) return traversal;
 
@@ -49,10 +51,10 @@ public class Solution {
         TreeNode r2 = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5, new TreeNode(6), new TreeNode(7))), new TreeNode(3, null, new TreeNode(8, new TreeNode(9), null)));
         System.out.println(s.inorderTraversal(r2));
 
-        System.out.println(s.inorderTraversalBest(r1));
-        System.out.println(s.inorderTraversalBest(r2));
+        System.out.println(s.inorderTraversalWithoutRecursion(r1));
+        System.out.println(s.inorderTraversalWithoutRecursion(r2));
 
         TreeNode r3 = new TreeNode(2, new TreeNode(3, new TreeNode(1), null), null);
-        System.out.println(s.inorderTraversalBest(r3));
+        System.out.println(s.inorderTraversalWithoutRecursion(r3));
     }
 }
