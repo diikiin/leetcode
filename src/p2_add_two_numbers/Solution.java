@@ -1,5 +1,7 @@
 package p2_add_two_numbers;
 
+import models.ListNode;
+
 public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode();

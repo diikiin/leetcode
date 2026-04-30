@@ -1,5 +1,7 @@
 package p83_remove_duplicates_from_sorted_list;
 
+import models.ListNode;
+
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode();
