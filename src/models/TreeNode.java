@@ -14,4 +14,21 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append(this.val).append(" ");
+        if (this.left != null) {
+            str.append(this.left).append(" ");
+        } else {
+            str.append("null ");
+        }
+        if (this.right!=null){
+            str.append(this.right).append(" ");
+        } else {
+            str.append("null");
+        }
+        return str.toString();
+    }
 }
